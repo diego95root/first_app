@@ -1,4 +1,8 @@
 
 # This is my first rails app
 
-Not much to see in here...
+------
+
+Only a project in order to get to know the basics of rails, not too interesting.
+
+[This is the app](https://railstutorialdiegob.herokuapp.com)
