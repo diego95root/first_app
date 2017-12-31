@@ -34,4 +34,15 @@ describe "Static pages" do
       expect(page).to have_title("About me")
     end
   end
+
+  describe "Contact page" do
+    it "should have the content 'Contact'" do
+      visit '/static/contact'
+      expect(page).to have_selector('h1', :text => 'Contact me')
+    end
+    it "should have the right title" do
+      visit 'static/contact'
+      expect(page).to have_title("Contact")
+    end
+  end
 end
