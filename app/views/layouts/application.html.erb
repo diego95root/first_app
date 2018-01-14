@@ -9,10 +9,12 @@
 
   <body>
     <%= yield %>
-    <% Dir.glob("app/views/static/*").each do|f| %>
-    <%= link_to f, "none" %>
+    <% Dir.glob("app/views/static/*").each do|f|
+      file = f.split("/")[-1][0..-5] %>
+    <%= if file != "—no-test-framework.html" and file != yield(:title).downcase + ".html"
+      link_to file, "/static/" + file
+    end
+    %>
     <% end %>
-    <%= link_to yield(:title), "/static/help.html" %>
-    <%= link_to Dir.glob("app/views/static/*").length, "/static/help.html" %>
   </body>
 </html>
