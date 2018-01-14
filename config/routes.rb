@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'static/contact'
   root 'static#home'
 
-  get 'welcome/index'
-  resources :articles
-  root 'welcome#index'
+  #get 'welcome/index'
+  #resources :articles
+  #root 'welcome#index'
 end

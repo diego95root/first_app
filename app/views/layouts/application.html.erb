@@ -9,5 +9,10 @@
 
   <body>
     <%= yield %>
+    <% Dir.glob("app/views/static/*").each do|f| %>
+    <%= link_to f, "none" %>
+    <% end %>
+    <%= link_to yield(:title), "/static/help.html" %>
+    <%= link_to Dir.glob("app/views/static/*").length, "/static/help.html" %>
   </body>
 </html>
